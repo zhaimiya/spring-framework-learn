@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:myname="http://www.vi.com/schema/user"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.vi.com/schema/user autotag.xsd">
+
+	<myname:user id="001"  usrnm="miya" email="miya@163.com"></myname:user>
+
+	<bean id="javaCollection" class="vi.com.bean.aotutag.User">
+
+	<!-- java.util.List -->
+	<property name="list">
+		<list>
+			<value>INDIA</value>
+			<value>Pakistan</value>
+			<value>USA</value>
+			<value>UK</value>
+		</list>
+	</property>
+
+	<!-- java.util.Set -->
+	<property name="customSet">
+		<set>
+			<value>INDIA</value>
+			<value>Pakistan</value>
+			<value>USA</value>
+			<value>UK</value>
+		</set>
+	</property>
+
+	<!-- java.util.Map -->
+	<property name="customMap">
+		<map>
+			<entry key="1" value="INDIA"/>
+			<entry key="2" value="Pakistan"/>
+			<entry key="3" value="USA"/>
+			<entry key="4" value="UK"/>
+		</map>
+	</property>
+
+	<!-- java.util.Properties -->
+	<property name="properties">
+		<props>
+			<prop key="admin">admin@nospam.com</prop>
+			<prop key="support">support@nospam.com</prop>
+		</props>
+	</property>
+	</bean>
+</beans>
